@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ProfileSettingsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/card1"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:id="@+id/profileImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/default_avatar"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </RelativeLayout>
+            <Button
+                android:id="@+id/signin"
+                android:layout_width="match_parent"
+                android:layout_margin="30dp"
+                android:layout_height="wrap_content"
+                android:text="Sign in"
+                android:visibility="gone"
+                android:background="@drawable/button_bg2"
+                android:textColor="#fff"/>
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="#031161"
+                android:textSize="17dp"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/userStatus"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="#3814BA"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:layout_marginBottom="20dp"
+                android:textAlignment="center"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hideCard"
+        android:layout_width="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"
+        android:outlineAmbientShadowColor="@color/black"
+        app:cardCornerRadius="10dp"
+        android:layout_height="170dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/hidetxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textSize="13dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Start selling your products with us by \nclicking the below button"/>
+
+            <Button
+                android:id="@+id/startSelling"
+                android:layout_width="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:text="Start Selling with us"
+                android:layout_below="@+id/hidetxt"
+                android:visibility="visible"
+                android:background="@drawable/button_bg2"
+                android:textColor="#fff"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:id="@+id/myaccount"
+                android:background="?attr/selectableItemBackground">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/guser_single_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+                    android:backgroundTint="#031161"
+                    android:backgroundTintMode="add"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/account4" />
+
+                <TextView
+                    android:id="@+id/guser_single_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_toEndOf="@+id/guser_single_image"
+                    android:text="Account Settings"
+
+                    android:layout_centerVertical="true"
+                    android:textColor="#031161"
+                    android:textSize="16dp" />
+
+
+                <View
+                    android:layout_width="290dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="100dp"
+
+
+                    android:layout_alignParentBottom="true"
+                    android:background="#20000000" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:visibility="gone"
+                android:id="@+id/mycampaign"
+                android:background="?attr/selectableItemBackground">
+
+<!--                <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                    android:id="@+id/campaign_image"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_marginStart="24dp"-->
+<!--                    android:backgroundTint="#031161"-->
+<!--                    android:backgroundTintMode="add"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    android:src="@drawable/ic_baseline_assessment_24" />-->
+
+                <TextView
+                    android:id="@+id/campaign_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_toEndOf="@+id/campaign_image"
+                    android:text="My Campaigns"
+
+                    android:layout_centerVertical="true"
+                    android:textColor="#031161"
+                    android:textSize="16dp" />
+
+
+                <View
+                    android:layout_width="290dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="100dp"
+
+
+                    android:layout_alignParentBottom="true"
+                    android:background="#20000000" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:id="@+id/appSettings"
+                android:background="?attr/selectableItemBackground">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/guser_single_image3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+                    android:backgroundTint="#031161"
+                    android:backgroundTintMode="add"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/app4" />
+
+                <TextView
+                    android:id="@+id/guser_single_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_toEndOf="@+id/guser_single_image3"
+                    android:text="App Settings"
+
+                    android:layout_centerVertical="true"
+                    android:textColor="#031161"
+                    android:textSize="16dp" />
+
+
+                <View
+                    android:layout_width="290dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="100dp"
+
+
+                    android:layout_alignParentBottom="true"
+                    android:background="#20000000" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:id="@+id/logout"
+                android:background="?attr/selectableItemBackground">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/guser_single_image2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/logout3" />
+
+                <TextView
+                    android:id="@+id/guser_single_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_toEndOf="@+id/guser_single_image2"
+                    android:text="Logout"
+
+                    android:layout_centerVertical="true"
+                    android:textColor="#031161"
+                    android:textSize="16dp" />
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

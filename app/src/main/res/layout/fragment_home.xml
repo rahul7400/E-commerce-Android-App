@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".Fragments.HomeFragment">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:id="@+id/nestedScroll"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/topCard"
+                    app:cardCornerRadius="25dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/bannerHome"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/img3"
+                        android:scaleType="centerCrop"
+                        android:layout_height="200dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:id="@+id/cityNear"
+                    android:fontFamily="@font/nunito_bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity=""
+                    android:visibility="gone"
+                    android:textColor="#3814BA"
+                    android:layout_marginBottom="10dp"
+                    android:text="Near You"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hideCard"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:outlineAmbientShadowColor="@color/black"
+                        app:cardCornerRadius="10dp"
+                        android:layout_height="170dp"/>
+                    <TextView
+                        android:id="@+id/hidetxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="10dp"
+                        android:layout_marginTop="50dp"
+                        android:textAlignment="center"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Sign in to know trendingProducts near you "/>
+
+                    <Button
+                        android:id="@+id/signin"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sign in"
+                        android:layout_below="@+id/hidetxt"
+                        android:visibility="visible"
+                        android:background="@drawable/button_bg2"
+                        android:textColor="#fff"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/nearMeView"
+                        android:overScrollMode="never"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity=""
+                    android:visibility="gone"
+                    android:textColor="#3814BA"
+                    android:layout_marginBottom="10dp"
+                    android:text="Categories you may like"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/categoriesView"
+                        android:overScrollMode="never"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="#3814BA"
+                    android:padding="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/ic_baseline_trending_up_24_white"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:layout_gravity=""
+                        android:layout_marginStart="10dp"
+                        android:textColor="#fff"
+                        android:text="Trending Gifts in India"/>
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/trendingView"
+                    android:layout_marginStart="15dp"
+                    android:overScrollMode="never"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#3814BA"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+
+                    android:background="#C83034FF"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:id="@+id/globalCity"
+
+                                android:layout_marginStart="15dp"
+                                android:layout_gravity=""
+                                android:layout_marginTop="10dp"
+                                android:textColor="#ffffff"
+                                android:text="Products across india"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_gravity=""
+                                android:textColor="#ffffff"
+                                android:layout_marginBottom="10dp"
+                                android:text="Deals of the day"/>
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/viewAllBtn"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/round_white"
+                            android:backgroundTint="#fff"
+                            android:textSize="10dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:text="View all"/>
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+
+                        android:layout_width="match_parent"
+                        android:id="@+id/productsAcrossIndia"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="10dp"
+                        android:overScrollMode="never"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/midBanner"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/poster2"
+                        android:scaleType="centerCrop"
+                        android:layout_height="200dp"/>
+                </androidx.cardview.widget.CardView>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="10dp"
+                        android:background="@drawable/flag"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="16dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_gravity=""
+                                    android:fontFamily="@font/century_bold"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="#ffffff"
+                                    android:text="Support the locals"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_gravity=""
+                                    android:fontFamily="@font/century_bold"
+                                    android:textColor="#ffffff"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="Make in India"/>
+                            </LinearLayout>
+                            <Button
+                                android:id="@+id/viewlocalsBtn"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/round_white"
+                                android:backgroundTint="#fff"
+                                android:textSize="10dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:text="View all"/>
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:background="#52000000"
+                            android:paddingBottom="10dp"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+
+                                android:layout_width="match_parent"
+                                android:id="@+id/suportLocals"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginTop="10dp"
+                                android:overScrollMode="never"
+                                android:layout_height="wrap_content"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="#3814BA"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_history_24"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:textColor="#fff"
+                            android:textSize="16dp"
+                            android:text="Recently Viewed Products"/>
+                        <Button
+                            android:id="@+id/clearHistory"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.4"
+                            android:padding="10dp"
+                            android:text="Clear"
+                            android:textSize="10dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/round_white"
+                            android:backgroundTint="#ffffff"/>
+
+                    </LinearLayout>
+
+
+
+
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:background="#E5E5E5"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/noHistory"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_height="200dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:src="@drawable/empty"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textAlignment="center"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:text="No Recent Product Viewed"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/recentProduct"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:overScrollMode="never"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#3814BA"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="70dp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+

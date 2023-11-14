@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#FF6200EE"
+        android:id="@+id/txt3"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:text="Report a product"
+            android:textColor="#fff"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/txt3"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/pName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editbox_bg"
+            android:padding="15dp"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:text="Product Name"/>
+
+        <EditText
+            android:id="@+id/emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editbox_bg"
+            android:padding="15dp"
+            android:inputType="textEmailAddress"
+            android:layout_margin="10dp"
+            android:textSize="15sp"
+            android:hint="Your email address"/>
+        <TextView
+            android:id="@+id/emailError"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            android:layout_marginBottom="10dp"
+            android:text="Please enter your email address"/>
+
+        <EditText
+            android:id="@+id/issue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editbox_bg"
+            android:padding="15dp"
+            android:maxLines="10"
+            android:inputType="textMultiLine"
+            android:layout_margin="10dp"
+            android:textSize="15sp"
+            android:hint="Describe the issue"/>
+
+
+        <Button
+            android:id="@+id/reportBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#FF6200EE"
+            android:background="@drawable/button_bg"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
+</layout>

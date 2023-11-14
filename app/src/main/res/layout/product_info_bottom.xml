@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    android:id="@+id/parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scroll"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+                <ImageView
+                    android:id="@+id/mainImage"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img3"/>
+            </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/report_bg"
+            android:padding="20dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/pName"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:maxLines="1"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="#7900D9"
+                    android:text="Handmade Item Name"/>
+
+                <ImageView
+                    android:id="@+id/like"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_gravity="center"
+                    android:layout_height="30dp"
+                    android:src="@drawable/heart2"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:text="Rs 200"/>
+
+
+
+            <Button
+                android:id="@+id/buyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buy Now"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/button_bg"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="89dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_height="69dp">
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img3"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/amazonIcon"
+                android:layout_width="89dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="10dp"
+                android:layout_height="69dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:padding="25dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/amazon"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="89dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_height="69dp">
+                <ImageView
+                    android:id="@+id/shopIcon"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:padding="25dp"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/filpkart"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/report_bg"
+            android:padding="20dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:text="Description"/>
+
+            <TextView
+                android:id="@+id/pDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#797979"
+                android:text="Description"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/report_bg"
+                android:padding="20dp"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text="Report this product"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#BFBFBF"
+                    android:textSize="12dp"
+                    android:text="In case of any type of complain aganist the product contact us immediately. In case
+product found faulty, It will be removed immediately."/>
+
+                <Button
+                    android:id="@+id/productReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textSize="12dp"
+                    android:text="Report"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_bg"/>
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#BFBFBF"
+                android:textSize="12dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:text="Macrocodes"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

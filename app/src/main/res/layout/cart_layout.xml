@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="1dp"
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/pImage"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img3"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/pName"
+                    android:layout_width="match_parent"
+                    android:text="Product Name"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="#000"
+                    android:maxLines="1"
+                    android:layout_marginEnd="12dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:id="@+id/pDesc"
+                    android:layout_width="match_parent"
+                    android:text="Product Description"
+                    android:textSize="12dp"
+                    android:textColor="#A8A8A8"
+                    android:maxLines="2"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/pPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 250"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="#000"
+                        android:maxLines="1"
+                        android:layout_weight="1" />
+                    <ImageView
+                        android:id="@+id/likeBtn"
+                        android:layout_width="34dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/heart_filled2" />
+
+                    <ImageView
+                        android:id="@+id/shareBtn"
+                        android:layout_width="30dp"
+                        android:backgroundTint="#FF6200EE"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/share" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

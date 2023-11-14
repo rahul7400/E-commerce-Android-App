@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SearchFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editbox_bg"
+            android:padding="15dp"
+            android:inputType="textEmailAddress"
+            android:layout_margin="10dp"
+            android:textSize="15sp"
+            android:imeActionLabel="actionGo"
+            android:singleLine="true"
+            android:hint="Search a product"/>
+
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_search_24"
+            android:background="@drawable/search_bg"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/searchView"/>
+
+</RelativeLayout>

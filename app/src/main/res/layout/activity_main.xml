@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <RelativeLayout
+            android:id="@+id/splashLayout"
+            android:layout_width="match_parent"
+            android:background="@color/specialColor"
+            android:elevation="20dp"
+            android:layout_height="match_parent">
+
+            <com.cunoraz.gifview.library.GifView
+                android:id="@+id/video"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="250dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+               app:gif="@drawable/logo" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/txt3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FF6200EE">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Home"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/cartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+                <TextView
+                    android:id="@+id/cartCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/round_white"
+                    android:elevation="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="1"
+                    android:textColor="#ffffff"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txt3" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                app:hideOnScroll="true"
+                app:itemIconSize="22dp"
+                app:itemIconTint="@drawable/bottom_navigation_selector"
+                app:itemRippleColor="@color/purple_700"
+                app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+                app:itemTextColor="#031161"
+                app:labelVisibilityMode="unlabeled"
+                app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+                app:menu="@menu/bottom_menu" />
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+</layout>
