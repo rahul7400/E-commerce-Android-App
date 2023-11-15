@@ -31,7 +31,7 @@ Crefti is an E-Commerce app designed for handmade products. It provides a platfo
 
 
 # App Demo Google PlayStore 
-<a href="[https://www.w3schools.com](https://play.google.com/store/apps/details?id=in.macrocodes.creatives)">
+<a href="https://play.google.com/store/apps/details?id=in.macrocodes.creatives">
 <img src="images/img5.png"  height="132">
 </a>
 
