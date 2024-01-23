@@ -1,4 +1,4 @@
-# Crefti - Handmade Products E-Commerce App
+# Crefti - Handmade Products E-Commerce App (Template Code)
 
 ![Crefti Logo](https://raw.githubusercontent.com/rahul7400/E-commerce-Android-App/main/images/logo.webp)
 
